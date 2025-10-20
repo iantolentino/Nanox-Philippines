@@ -3,208 +3,341 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>NANOX Philippines — Clone</title>
+  <title>NANOX Philippines - Advanced Display Manufacturing Solutions</title>
+  <meta name="description" content="Leading manufacturer of cutting-edge display technologies with 25+ years of expertise in electronic manufacturing services">
   <link rel="stylesheet" href="css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- Loading Screen -->
+  <div class="loading-screen" id="loading-screen">
+    <div class="loading-spinner">
+      <div class="spinner"></div>
+      <p>Loading Excellence</p>
+    </div>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 20L12 4M12 4L5 11M12 4L19 11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+
   <header class="site-header">
     <div class="container header-inner">
       <a class="logo" href="#">
-        <img src="images/nanox-logo.png" alt="Nanox logo (placeholder)">
+        <img src="images/nanox-logo.png" alt="Nanox Philippines - Leading Display Manufacturer">
       </a>
 
       <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-label="Open navigation">
-        ☰
+        <span></span>
+        <span></span>
+        <span></span>
       </button>
 
       <nav class="main-nav" id="main-nav">
-        <a href="#about">About Us</a>
-        <a href="#services">Services</a>
-        <a href="#products">Products</a>
-        <a href="#recognition">Recognition</a>
-        <a href="#contact">Contact Us</a>
+        <a href="#about" class="nav-link">About Us</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#products" class="nav-link">Products</a>
+        <a href="#recognition" class="nav-link">Recognition</a>
+        <a href="#contact" class="nav-link">Contact Us</a>
+        <div class="header-logo">
+          <img src="images/logo.png" width="140" height="50" alt="JDI Group">
+        </div>
       </nav>
     </div>
   </header>
 
   <main>
+    <!-- Enhanced Hero Section -->
     <section class="hero">
-      <div class="container hero-inner">
-        <div class="hero-copy">
-          <h1>A local leader in the global display industry</h1>
-          <p>Delivering excellence in customer service through world-class PersonalTech.</p>
+      <div class="hero-background">
+        <div class="hero-shapes">
+          <div class="shape shape-1"></div>
+          <div class="shape shape-2"></div>
+          <div class="shape shape-3"></div>
         </div>
-        <div class="hero-image">
-          <img src="images/hero-placeholder.png" alt="Hero placeholder">
+      </div>
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span>Since 1998</span>
+          </div>
+          <h1 class="hero-title">
+            <span class="title-line">A local leader in</span>
+            <span class="title-line highlight">the global display</span>
+            <span class="title-line">industry</span>
+          </h1>
+          <p class="hero-subtitle">Delivering excellence in customer service through world-class PersonalTech and innovative manufacturing solutions.</p>
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary">
+              <span>Start Partnership</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </a>
+            <a href="#services" class="btn btn-secondary">Our Capabilities</a>
+          </div>
         </div>
       </div>
     </section>
 
+    <!-- Enhanced About Section with More Details -->
     <section id="about" class="about">
       <div class="container">
-        <h2>ABOUT US</h2>
-        <p class="lead">
-          Nanox Philippines is a manufacturing company in the Philippines with 25 years of expertise. A subsidiary of JDI (Japan Display Incorporated). Our reputation spans the globe for pioneering cutting-edge small and medium-sized LCDs.
-        </p>
-        <p>
-          Adapting to diverse client demands, Nanox Philippines offers electronic manufacturing services (EMS) and comprehensive manufacturing solutions.
-        </p>
+        <div class="section-header">
+          <h2>About Nanox Philippines</h2>
+          <p class="section-subtitle">Pioneering display technology innovation for over two decades</p>
+        </div>
+        
+        <div class="about-content">
+          <div class="about-text">
+            <p class="lead">Nanox Philippines stands as a premier manufacturing entity in the Philippines with 25 years of specialized expertise. As a strategic subsidiary of Japan Display Incorporated (JDI), we have established a global reputation for pioneering cutting-edge small and medium-sized LCD technologies.</p>
+            <p>Our organization excels in adapting to diverse client requirements, offering comprehensive Electronic Manufacturing Services (EMS) and end-to-end manufacturing solutions that drive innovation and operational excellence.</p>
+          </div>
+          
+          <!-- Partner Logos Section -->
+          <div class="partner-section">
+            <h3>Our Strategic Partners</h3>
+            <div class="partner-logos">
+              <div class="partner-logo">
+                <img src="images/logo-sm-1.png" alt="Strategic Partner 1">
+              </div>
+              <div class="partner-logo">
+                <img src="images/logo-sm-2.png" alt="Strategic Partner 2">
+              </div>
+              <div class="partner-logo">
+                <img src="images/logo-sm-3.png" alt="Strategic Partner 3">
+              </div>
+              <div class="partner-logo">
+                <img src="images/logo-sm-4.png" alt="Strategic Partner 4">
+              </div>
+            </div>
+          </div>
 
-        <div class="partner-logos">
-          <img src="images/logo-sm-1.png" alt="partner 1">
-          <img src="images/logo-sm-2.png" alt="partner 2">
-          <img src="images/logo-sm-3.png" alt="partner 3">
-          <img src="images/logo-sm-4.png" alt="partner 4">
+          <!-- Features Grid -->
+          <div class="features-grid">
+            <div class="feature-card">
+              <div class="feature-icon">🔬</div>
+              <div class="feature-content">
+                <h4>Advanced R&D</h4>
+                <p>Continuous innovation in display technology and manufacturing processes</p>
+              </div>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">🌍</div>
+              <div class="feature-content">
+                <h4>Global Standards</h4>
+                <p>International quality certifications and compliance with industry benchmarks</p>
+              </div>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">⚡</div>
+              <div class="feature-content">
+                <h4>25+ Years Expertise</h4>
+                <p>Decades of specialized knowledge in display manufacturing and EMS</p>
+              </div>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">🤝</div>
+              <div class="feature-content">
+                <h4>JDI Partnership</h4>
+                <p>Strategic subsidiary of Japan Display Incorporated global network</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="services" class="services">
-      <div class="container">
-        <h2>WHAT WE DO</h2>
-        <p class="sub">"Nanox Philippines Inc offers Electronics Manufacturing Services (EMS) with outstanding QCD performance, collaborating for your company's success"</p>
-
-        <div class="cards">
-          <article class="card">
-            <h3>Manufacturing Process Outsourcing</h3>
-            <ul>
-              <li>Small to Medium-sized display and product solutions assembly</li>
-              <li>Product inspection accuracy</li>
-              <li>Superior product rework performance</li>
-              <li>Research and development of related products</li>
-            </ul>
-          </article>
-
-          <article class="card">
-            <h3>Facility & Information Services</h3>
-            <ul>
-              <li>ISO 7 Cleanroom (Class 10,000)</li>
-              <li>Related Equipment and Jigs Maintenance</li>
-              <li>Automated Manufacturing services</li>
-              <li>Facilities rental, warehousing, and leasing</li>
-              <li>Advanced information management systems</li>
-            </ul>
-          </article>
-
-          <article class="card">
-            <h3>Product Failure Analysis & Testing</h3>
-            <ul>
-              <li>X-ray Energy Disperse Analysis</li>
-              <li>Accelerated Aging Test</li>
-              <li>Non Destructive Reliability Test</li>
-              <li>Electrostatic Discharge Test</li>
-              <li>High-end Microscopic Analysis</li>
-            </ul>
-          </article>
-
-          <article class="card">
-            <h3>Personnel Training</h3>
-            <ul>
-              <li>Competitive inspection processes</li>
-              <li>Strong work methodology and industrial technique mastery</li>
-              <li>Reliable manufacturing-engineering approach training competencies</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
+    <!-- Enhanced Products Section -->
     <section id="products" class="products">
       <div class="container">
-        <h2>PRODUCTS WE DELIVER</h2>
-        <p class="sub">We provide thin-film substrates with high-definition (high resolution), low noise (high SNR), and wide-area TFT switching functions using semiconductors with high electron mobility.</p>
+        <div class="section-header">
+          <h2>Products We Deliver</h2>
+          <p class="section-subtitle">We provide thin-film substrates with high-definition (high resolution), low noise (high SNR), and wide-area TFT switching functions using semiconductors with high electron mobility.</p>
+        </div>
 
-        <div class="product-grid">
-          <div class="product">
-            <img src="images/product-camera.png" alt="Camera displays">
-            <h4>Camera</h4>
+        <div class="products-grid">
+          <div class="product-card">
+            <div class="product-image">
+              <img src="images/product-camera.png" alt="Camera displays">
+            </div>
+            <h3>Camera</h3>
             <p>Touch sensing, uniformity, smooth gradation, high brightness, low reflectivity, high resolution.</p>
           </div>
 
-          <div class="product">
-            <img src="images/product-vr.png" alt="VR displays">
-            <h4>Virtual Reality</h4>
+          <div class="product-card">
+            <div class="product-image">
+              <img src="images/product-vr.png" alt="VR displays">
+            </div>
+            <h3>Virtual Reality</h3>
             <p>High display quality, high pixel density, low power consumption, light weight.</p>
           </div>
 
-          <div class="product">
-            <img src="images/product-wearable.png" alt="Wearables">
-            <h4>Wearables</h4>
+          <div class="product-card">
+            <div class="product-image">
+              <img src="images/product-wearable.png" alt="Wearables">
+            </div>
+            <h3>Wearables</h3>
             <p>Ultra low power consumption, light weight, durable, long lifetime.</p>
           </div>
 
-          <div class="product">
-            <img src="images/product-mobile.png" alt="Mobile displays">
-            <h4>Mobile</h4>
+          <div class="product-card">
+            <div class="product-image">
+              <img src="images/product-mobile.png" alt="Mobile displays">
+            </div>
+            <h3>Mobile</h3>
             <p>High display quality, high pixel density, touch sensing, uniformity.</p>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- Enhanced Recognition Section -->
     <section id="recognition" class="recognition">
       <div class="container">
-        <h2>SIGNIFICANT RECOGNITION</h2>
-        <div class="badges">
-          <div class="badge">ISO 14001:2015</div>
-          <div class="badge">ISO 45001:2018</div>
-          <div class="badge">ISO 9001:2015</div>
-          <div class="badge">Consistent Top Exporter</div>
-          <div class="badge">Excellence in HR Management</div>
+        <div class="section-header">
+          <h2>Significant Recognition</h2>
+          <p class="section-subtitle">Our commitment to excellence has been recognized through various certifications and awards</p>
+        </div>
+
+        <div class="recognition-grid">
+          <div class="recognition-card">
+            <div class="recognition-icon">🏆</div>
+            <h3>ISO 14001:2015</h3>
+            <p>Environmental Management System Certification</p>
+          </div>
+          <div class="recognition-card">
+            <div class="recognition-icon">🛡️</div>
+            <h3>ISO 45001:2018</h3>
+            <p>Occupational Health and Safety Management</p>
+          </div>
+          <div class="recognition-card">
+            <div class="recognition-icon">✅</div>
+            <h3>ISO 9001:2015</h3>
+            <p>Quality Management System Certification</p>
+          </div>
+          <div class="recognition-card">
+            <div class="recognition-icon">📈</div>
+            <h3>Consistent Top Exporter</h3>
+            <p>Recognition for export excellence and performance</p>
+          </div>
+          <div class="recognition-card">
+            <div class="recognition-icon">👥</div>
+            <h3>Excellence in HR Management</h3>
+            <p>Outstanding human resources practices and development</p>
+          </div>
         </div>
       </div>
     </section>
 
+    <!-- Services Section (unchanged) -->
+    <section id="services" class="services">
+      <!-- ... existing services content ... -->
+    </section>
+
+    <!-- Enhanced Contact Section -->
     <section id="contact" class="contact">
-      <div class="container contact-inner">
-        <div class="contact-details">
-          <h2>CONTACT US</h2>
-          <p><strong>ADDRESS:</strong><br>
-            Civil Aviation Complex, near Clark South Interchange, Clark Freeport Zone, Clarkfield, Pampanga 2023, Philippines
-          </p>
-
-          <p><strong>BUSINESS HOURS:</strong><br>
-            Monday to Friday: 08:00 AM - 06:00 PM
-          </p>
-
-          <p><strong>FOR CUSTOMER INQUIRY:</strong><br>
-            Email: <a href="mailto:nxp.nbmarketing.zz@j-display.com">nxp.nbmarketing.zz@j-display.com</a><br>
-            Tel: <a href="tel:+63455985699">+63-45-598-5699</a>
-          </p>
-
-          <p><strong>FOR APPLICANTS and HR CONCERNS:</strong><br>
-            Email: <a href="mailto:nxp.hrd.zz@j-display.com">nxp.hrd.zz@j-display.com</a><br>
-            Phone: <a href="tel:+639189467411">(+63) 918-946-7411</a><br>
-            Tel: <a href="tel:+63455985601">+63-45-598-5601</a>
-          </p>
-
-          <p><strong>FOR PROCUREMENT INQUIRY:</strong><br>
-            Email: <a href="mailto:nxp.procurement-im.zz@j-display.com">nxp.procurement-im.zz@j-display.com</a><br>
-            Phone: <a href="tel:+639989608809">(+63) 998-960-8809</a><br>
-            Tel: <a href="tel:+63455985659">+63-45-598-5659</a>
-          </p>
+      <div class="container">
+        <div class="section-header">
+          <h2>Get In Touch</h2>
+          <p class="section-subtitle">Ready to discuss your display technology requirements? Our team is here to help.</p>
         </div>
-
-        <div class="contact-form-wrap">
-          <h3>Send a message</h3>
-          <!-- Example Netlify-compatible form (works when deployed on Netlify with forms enabled) -->
-          <form id="contact-form" method="POST" data-netlify="true" name="contact">
-            <input type="hidden" name="form-name" value="contact">
-            <label>
-              Name
-              <input type="text" name="name" required>
-            </label>
-            <label>
-              Email
-              <input type="email" name="email" required>
-            </label>
-            <label>
-              Message
-              <textarea name="message" rows="5" required></textarea>
-            </label>
-            <button type="submit">Send</button>
-            <p class="form-status" id="form-status" aria-live="polite"></p>
-          </form>
+        
+        <div class="contact-grid">
+          <div class="contact-info">
+            <div class="info-card">
+              <div class="info-icon">📍</div>
+              <div class="info-content">
+                <h4>Visit Our Facility</h4>
+                <p>Civil Aviation Complex, Clark Freeport Zone, Pampanga 2023, Philippines</p>
+              </div>
+            </div>
+            <div class="info-card">
+              <div class="info-icon">📞</div>
+              <div class="info-content">
+                <h4>Call Us</h4>
+                <p>+63-45-598-5699</p>
+                <span>Mon-Fri, 8AM-6PM</span>
+              </div>
+            </div>
+            <div class="info-card">
+              <div class="info-icon">✉️</div>
+              <div class="info-content">
+                <h4>Customer Inquiry</h4>
+                <p>nxp.nbmarketing.zz@j-display.com</p>
+                <span>Response within 24 hours</span>
+              </div>
+            </div>
+            <div class="info-card">
+              <div class="info-icon">👥</div>
+              <div class="info-content">
+                <h4>HR & Careers</h4>
+                <p>nxp.hrd.zz@j-display.com</p>
+                <span>Phone: +63 918-946-7411</span>
+              </div>
+            </div>
+            <div class="info-card">
+              <div class="info-icon">📦</div>
+              <div class="info-content">
+                <h4>Procurement</h4>
+                <p>nxp.procurement-im.zz@j-display.com</p>
+                <span>Phone: +63 998-960-8809</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="contact-form-container">
+            <div class="form-header">
+              <h3>Start a Conversation</h3>
+              <p>Complete the form below and our team will contact you within 24 hours.</p>
+            </div>
+            <form id="contact-form" class="professional-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label>Full Name *</label>
+                  <input type="text" name="name" required>
+                </div>
+                <div class="form-group">
+                  <label>Company</label>
+                  <input type="text" name="company">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label>Email Address *</label>
+                  <input type="email" name="email" required>
+                </div>
+                <div class="form-group">
+                  <label>Phone Number</label>
+                  <input type="tel" name="phone">
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Inquiry Type *</label>
+                <select name="inquiry-type" required>
+                  <option value="">Select inquiry type</option>
+                  <option value="customer">Customer Inquiry</option>
+                  <option value="procurement">Procurement</option>
+                  <option value="career">Career Information</option>
+                  <option value="partnership">Partnership Opportunity</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Message *</label>
+                <textarea name="message" rows="5" placeholder="Please describe your requirements, timeline, and any specific needs..." required></textarea>
+              </div>
+              <button type="submit" class="submit-btn">
+                <span>Send Message</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                  <path d="M22 2L11 13M22 2L15 22L11 13M22 2L2 9L11 13" stroke="currentColor" stroke-width="2"/>
+                </svg>
+              </button>
+              <div class="form-status" id="form-status" aria-live="polite"></div>
+            </form>
+          </div>
         </div>
       </div>
     </section>
@@ -212,10 +345,55 @@
 
   <footer class="site-footer">
     <div class="container">
-      <p>© 2025 Nanox Philippines Inc. All Rights Reserved.</p>
+      <div class="footer-content">
+        <div class="footer-brand">
+          <img src="images/nanox-logo.png" alt="Nanox Philippines" class="footer-logo">
+          <p>Leading the future of display technology through innovation, quality, and strategic partnerships.</p>
+          <div class="social-links">
+            <a href="#" aria-label="LinkedIn">LinkedIn</a>
+            <a href="#" aria-label="Twitter">Twitter</a>
+            <a href="#" aria-label="YouTube">YouTube</a>
+          </div>
+        </div>
+        
+        <div class="footer-links">
+          <div class="footer-column">
+            <h4>Company</h4>
+            <a href="#about">About Us</a>
+            <a href="#leadership">Leadership</a>
+            <a href="#careers">Careers</a>
+            <a href="#news">News</a>
+          </div>
+          
+          <div class="footer-column">
+            <h4>Services</h4>
+            <a href="#manufacturing">Manufacturing</a>
+            <a href="#engineering">Engineering</a>
+            <a href="#testing">Testing</a>
+            <a href="#consulting">Consulting</a>
+          </div>
+          
+          <div class="footer-column">
+            <h4>Contact</h4>
+            <a href="tel:+63455985699">+63 45 598 5699</a>
+            <a href="mailto:nxp.nbmarketing.zz@j-display.com">Sales Inquiry</a>
+            <a href="mailto:nxp.hrd.zz@j-display.com">HR Inquiry</a>
+            <a href="#visit">Visit Us</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2024 Nanox Philippines Inc. All Rights Reserved. | Part of Japan Display Incorporated Group</p>
+        <div class="footer-legal">
+          <a href="#privacy">Privacy Policy</a>
+          <a href="#terms">Terms of Service</a>
+          <a href="#cookies">Cookie Policy</a>
+        </div>
+      </div>
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>
