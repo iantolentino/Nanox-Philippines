@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
       setTimeout(() => {
         loadingScreen.remove();
       }, 600);
-    }, 1500);
+    }, 500);
   }
 
   // Enhanced Mobile Navigation
