@@ -1220,3 +1220,203 @@ body {
     height: 25px;
   }
 }
+
+/* Add to your existing CSS file */
+
+/* Services Section */
+.services {
+  padding: 120px 0;
+  background: var(--bg);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 32px;
+}
+
+.service-card {
+  background: var(--card-bg);
+  padding: 40px 32px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  transition: all 0.4s ease;
+  border: 1px solid rgba(13, 71, 161, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--gradient);
+  transition: width 0.4s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-hover);
+}
+
+.service-card:hover::before {
+  width: 8px;
+}
+
+.service-icon {
+  width: 64px;
+  height: 64px;
+  background: var(--accent-lighter);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  color: var(--accent);
+}
+
+.service-card h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 20px;
+}
+
+.service-card p {
+  color: var(--muted);
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.service-card ul {
+  list-style: none;
+  margin-bottom: 24px;
+}
+
+.service-card li {
+  padding: 8px 0;
+  color: var(--muted);
+  position: relative;
+  padding-left: 20px;
+}
+
+.service-card li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* Improved Responsiveness */
+@media (max-width: 1024px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+    gap: 60px;
+    text-align: center;
+  }
+  
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+  
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+  }
+  
+  .nav-toggle {
+    display: block;
+  }
+  
+  .main-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 300px;
+    height: 100vh;
+    background: white;
+    flex-direction: column;
+    padding: 100px 32px 32px;
+    box-shadow: -10px 0 50px rgba(0, 0, 0, 0.1);
+    transition: right 0.4s ease;
+  }
+  
+  .main-nav.active {
+    right: 0;
+  }
+  
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .section-header h2 {
+    font-size: 2.2rem;
+  }
+  
+  .services-grid,
+  .products-grid,
+  .recognition-grid,
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .footer-links {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  
+  .footer-bottom {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+  .section-header h2 {
+    font-size: 1.8rem;
+  }
+  
+  .contact-form-container {
+    padding: 32px 24px;
+  }
+  
+  .service-card,
+  .product-card,
+  .recognition-card,
+  .feature-card {
+    padding: 32px 24px;
+  }
+  
+  .partner-logos {
+    gap: 16px;
+  }
+  
+  .partner-logo {
+    padding: 12px;
+  }
+  
+  .partner-logo img {
+    height: 25px;
+  }
+}
