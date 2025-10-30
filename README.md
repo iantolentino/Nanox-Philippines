@@ -1,8 +1,7 @@
  # Website Clone Project ( Nanox Philippines Inc )
 
 ## Project Overview
-This is a **cloned website** for a display manufacturing company. The code appears to be a frontend replica of what might be a real company's website, but this is a development/educational project.
-
+This is a **cloned website** for a display manufacturing company. 
 ## ⚠️ Important Disclaimer
 **This is a cloned website for development/educational purposes only:**
 - This is NOT the official Nanox Philippines website
