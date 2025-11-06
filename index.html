@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
@@ -7,15 +7,153 @@
   <meta name="description" content="Leading manufacturer of cutting-edge display technologies with 25+ years of expertise in electronic manufacturing services">
   <link rel="stylesheet" href="css/styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Additional CSS for new sections and loading screen update */
+    .partners-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 40px;
+    }
+    
+    .partner-item {
+      flex: 0 0 calc(25% - 40px);
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    
+    .partner-item img {
+      max-width: 150px;
+      height: auto;
+      filter: grayscale(100%);
+      transition: filter 0.3s ease;
+    }
+    
+    .partner-item:hover img {
+      filter: grayscale(0%);
+    }
+    
+    .recognition-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+    
+    .recognition-item {
+      flex: 0 0 calc(33.333% - 30px);
+      background: white;
+      padding: 30px 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(13, 71, 161, 0.08);
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+    
+    .recognition-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 30px rgba(13, 71, 161, 0.15);
+    }
+    
+    .recognition-icon {
+      font-size: 3rem;
+      margin-bottom: 15px;
+    }
+    
+    .shareholders-section {
+      padding: 80px 0;
+      background: #f8fafc;
+    }
+    
+    .shareholders-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 40px;
+      box-shadow: 0 4px 20px rgba(13, 71, 161, 0.08);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    
+    .shareholders-table th,
+    .shareholders-table td {
+      padding: 16px 20px;
+      text-align: left;
+      border-bottom: 1px solid #e2e8f0;
+    }
+    
+    .shareholders-table th {
+      background: #1565C0;
+      color: white;
+      font-weight: 600;
+    }
+    
+    .shareholders-table tr:last-child td {
+      border-bottom: none;
+    }
+    
+    .shareholders-table tr:nth-child(even) {
+      background: #f8fafc;
+    }
+    
+    .shareholders-table tr:hover {
+      background: #e3f2fd;
+    }
+    
+    /* Update loading screen to show logo */
+    .loading-logo {
+      width: 150px;
+      height: auto;
+      animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+    
+    /* Responsive styles */
+    @media (max-width: 1024px) {
+      .partner-item {
+        flex: 0 0 calc(33.333% - 40px);
+      }
+      
+      .recognition-item {
+        flex: 0 0 calc(50% - 30px);
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .partner-item {
+        flex: 0 0 calc(50% - 40px);
+      }
+      
+      .recognition-item {
+        flex: 0 0 100%;
+      }
+      
+      .shareholders-table {
+        display: block;
+        overflow-x: auto;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .partner-item {
+        flex: 0 0 100%;
+      }
+    }
+  </style>
 </head>
 <body>
-      <!-- Page Transition -->
+  <!-- Page Transition -->
   <div class="page-transition" id="page-transition"></div>
   
   <!-- Loading Screen -->
   <div class="loading-screen" id="loading-screen">
     <div class="loading-spinner">
-      <div class="spinner"></div>
+      <img src="images/nanox-logo.png" alt="Nanox Philippines" class="loading-logo">
       <p>Nanox Philippines Inc.</p>
     </div>
   </div>
@@ -44,6 +182,7 @@
         <a href="#services" class="nav-link">Services</a>
         <a href="#products" class="nav-link">Products</a>
         <a href="#recognition" class="nav-link">Recognition</a>
+        <a href="#shareholders" class="nav-link">Shareholders</a>
         <a href="#contact" class="nav-link">Contact Us</a>
         <div class="header-logo">
           <img src="images/logo.png" width="140" height="50" alt="JDI Group">
@@ -100,20 +239,20 @@
             <p>Our organization excels in adapting to diverse client requirements, offering comprehensive Electronic Manufacturing Services (EMS) and end-to-end manufacturing solutions that drive innovation and operational excellence.</p>
           </div>
           
-          <!-- Partner Logos Section -->
+          <!-- Partner Logos Section in Row Format -->
           <div class="partner-section">
             <h3>Our Strategic Partners</h3>
-            <div class="partner-logos">
-              <div class="partner-logo">
+            <div class="partners-row">
+              <div class="partner-item">
                 <img src="images/logo-sm-1.png" alt="Strategic Partner 1">
               </div>
-              <div class="partner-logo">
+              <div class="partner-item">
                 <img src="images/logo-sm-2.png" alt="Strategic Partner 2">
               </div>
-              <div class="partner-logo">
+              <div class="partner-item">
                 <img src="images/logo-sm-3.png" alt="Strategic Partner 3">
               </div>
-              <div class="partner-logo">
+              <div class="partner-item">
                 <img src="images/logo-sm-4.png" alt="Strategic Partner 4">
               </div>
             </div>
@@ -198,7 +337,7 @@
       </div>
     </section>
 
-    <!-- Enhanced Recognition Section -->
+    <!-- Enhanced Recognition Section in Row Format -->
     <section id="recognition" class="recognition">
       <div class="container">
         <div class="section-header">
@@ -206,28 +345,28 @@
           <p class="section-subtitle">Our commitment to excellence has been recognized through various certifications and awards</p>
         </div>
 
-        <div class="recognition-grid">
-          <div class="recognition-card">
+        <div class="recognition-row">
+          <div class="recognition-item">
             <div class="recognition-icon">🏆</div>
             <h3>ISO 14001:2015</h3>
             <p>Environmental Management System Certification</p>
           </div>
-          <div class="recognition-card">
+          <div class="recognition-item">
             <div class="recognition-icon">🛡️</div>
             <h3>ISO 45001:2018</h3>
             <p>Occupational Health and Safety Management</p>
           </div>
-          <div class="recognition-card">
+          <div class="recognition-item">
             <div class="recognition-icon">✅</div>
             <h3>ISO 9001:2015</h3>
             <p>Quality Management System Certification</p>
           </div>
-          <div class="recognition-card">
+          <div class="recognition-item">
             <div class="recognition-icon">📈</div>
             <h3>Consistent Top Exporter</h3>
             <p>Recognition for export excellence and performance</p>
           </div>
-          <div class="recognition-card">
+          <div class="recognition-item">
             <div class="recognition-icon">👥</div>
             <h3>Excellence in HR Management</h3>
             <p>Outstanding human resources practices and development</p>
@@ -236,9 +375,132 @@
       </div>
     </section>
 
-    <!-- Services Section (unchanged) -->
+    <!-- New Shareholders Section -->
+    <section id="shareholders" class="shareholders-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Major Shareholders</h2>
+          <p class="section-subtitle">Our valued shareholders and their investment in our company</p>
+        </div>
+        
+        <table class="shareholders-table">
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Shareholder</th>
+              <th>Number of Shares Held</th>
+              <th>Voting Rights Ratio (%)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Ichigo Trust</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>The Master Trust Bank of Japan, Ltd. (Trust Account)</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Nichia Corporation</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>JP JPMSE LUX RE NOMURA INT PLC 1 EQ CO</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>BNYM SA/NV FOR BNYM FOR BNYM GCM CLIENT ACCTS M ILM FE</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>JP JPMSE LUX RE BARCLAYS CAPITAL SEC LTD EQ CO</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>BNYM SA/NV FOR BNYM FOR BNY GCM CLIENT ACCOUNTS M LSCB RD</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td>BNY GCM CLIENT ACCOUNT JPRD AC ISG (FE-AC)</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>9</td>
+              <td>JPLLC-CL JPY</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>10</td>
+              <td>Haneda Turtle Service Co., Ltd.</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Services Section -->
     <section id="services" class="services">
-      <!-- ... existing services content ... -->
+      <div class="container">
+        <div class="section-header">
+          <h2>Our Services</h2>
+          <p class="section-subtitle">Comprehensive electronic manufacturing services and solutions</p>
+        </div>
+        
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon">⚙️</div>
+            <h3>Manufacturing</h3>
+            <p>State-of-the-art manufacturing processes for display technologies</p>
+            <ul>
+              <li>LCD Panel Assembly</li>
+              <li>Module Integration</li>
+              <li>Quality Control</li>
+            </ul>
+          </div>
+          
+          <div class="service-card">
+            <div class="service-icon">🔧</div>
+            <h3>Engineering</h3>
+            <p>Advanced engineering solutions for display applications</p>
+            <ul>
+              <li>Product Design</li>
+              <li>Prototyping</li>
+              <li>Testing & Validation</li>
+            </ul>
+          </div>
+          
+          <div class="service-card">
+            <div class="service-icon">📊</div>
+            <h3>Consulting</h3>
+            <p>Expert consulting services for display technology implementation</p>
+            <ul>
+              <li>Technology Assessment</li>
+              <li>Implementation Strategy</li>
+              <li>Performance Optimization</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Enhanced Contact Section -->
